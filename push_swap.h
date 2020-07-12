@@ -6,7 +6,7 @@
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 20:11:35 by rstarfir          #+#    #+#             */
-/*   Updated: 2020/07/11 22:02:11 by rstarfir         ###   ########.fr       */
+/*   Updated: 2020/07/12 16:37:08 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,12 @@ void					push_swap(int argc, char *argv);
 void					push(t_stack **a, t_stack **b);
 void					swap(t_stack **s);
 void					rotate(t_stack **s);
-void					rotate(t_stack **s);
-t_stack					*indexlistnew(int val, int i);
+void					revrot(t_stack **s);
+t_stack					*indexlstnew(int val, int i);
+void					indexlstdel(t_stack **s);
+int						stack_popfirst(t_stack **s);
+int						stack_poplast(t_stack *s, int *i);
 int						stack_push(int val, int i, t_stack **s);
-int 					stack_pushback(int val, int i, t_stack *s);
+int						stack_pushback(int val, int i, t_stack *s);
 
 #endif

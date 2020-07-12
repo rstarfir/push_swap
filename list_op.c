@@ -6,29 +6,50 @@
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 21:22:59 by rstarfir          #+#    #+#             */
-/*   Updated: 2020/07/11 21:40:29 by rstarfir         ###   ########.fr       */
+/*   Updated: 2020/07/12 16:24:01 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"push_swap.h"
 
-t_stack		*indexlistnew(int val, int i)
+int			stack_popfirst(t_stack **s)
 {
-	t_stack		*s;
+	t_stack		*tmp;
+	int			val;
 
-	s = (t_stack *)malloc(sizeof(t_stack));
-	s->index = i;
-	s->value = val;
-	s->next = NULL;
-	return (s);
+	if (!(*s)->next)
+	{
+		val = (*s)->value;
+		indextlistdel(s);
+	}
+	else
+	{
+		tmp = *s;
+		val = (*s)->value;
+		*s = (*s)->next;
+		free(tmp);
+	}
+	return(val);
 }
 
-int			stack_pop()
+int			stack_poplast(t_stack *s, int *i)
 {
+	t_stack *tmp;
+	int		val;
 
+	while (s->next)
+	{
+		tmp = s;
+		s = s->next;
+	}
+	val = s->value;
+	*i = s->index;
+	free(s);
+	tmp->next = NULL;
+	return (val);
 }
 
-int 		stack_push(int val, int i, t_stack **s)
+int			stack_push(int val, int i, t_stack **s)
 {
 	t_stack		*new;
 
@@ -37,7 +58,7 @@ int 		stack_push(int val, int i, t_stack **s)
 	*s = new;
 }
 
-int 		stack_pushback(int val, int i, t_stack *s)
+int			stack_pushback(int val, int i, t_stack *s)
 {
 	t_stack		*new;
 

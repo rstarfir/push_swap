@@ -1,48 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   indexlist.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/11 20:26:33 by rstarfir          #+#    #+#             */
-/*   Updated: 2020/07/12 16:54:00 by rstarfir         ###   ########.fr       */
+/*   Created: 2020/07/12 16:20:04 by rstarfir          #+#    #+#             */
+/*   Updated: 2020/07/12 16:26:36 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_swap(int argc, char *argv)
+t_stack		*indexlistnew(int val, int i)
 {
-	t_stack		*a;
-	t_stack		*b;
+	t_stack		*s;
 
-	a = NULL;
-	b = NULL;
-	
+	s = (t_stack *)malloc(sizeof(t_stack));
+	s->index = i;
+	s->value = val;
+	s->next = NULL;
+	return (s);
 }
 
-int		main(int argc, char **argv)
+void	indexlstdel(t_stack **s)
 {
-	char	**arg;
-	char	**freearg;
+	t_stack		*tmp;
+	t_stack		*ss;
 
-	if (argc < 2)
-		exit(0);
-	else if (argc == 2)
+	if (!*s)
+		return ;
+	ss = *s;
+	while (*s)
 	{
-		arg = ft_strsplit(argv[1], ' ');
-		freearg = arg;
-		push_swap(ft_wrdcnt(argv[1], ' '), arg);
-		while (*arg)
-		{
-			free(*arg);
-			arg++;
-		}
-		free(freearg);
+		tmp = (*s)->next;
+		free(*s);
+		*s = tmp;
 	}
-	else
-	push_swap(argc, &argv[1]);
-	return (0);
+	ss = NULL;
 }
- 
