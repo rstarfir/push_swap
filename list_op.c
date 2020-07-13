@@ -6,15 +6,15 @@
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 21:22:59 by rstarfir          #+#    #+#             */
-/*   Updated: 2020/07/12 16:24:01 by rstarfir         ###   ########.fr       */
+/*   Updated: 2020/07/13 15:11:30 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"push_swap.h"
 
-int			stack_popfirst(t_stack **s)
+int			indexlist_popfirst(t_ilist **s)
 {
-	t_stack		*tmp;
+	t_ilist		*tmp;
 	int			val;
 
 	if (!(*s)->next)
@@ -32,9 +32,9 @@ int			stack_popfirst(t_stack **s)
 	return(val);
 }
 
-int			stack_poplast(t_stack *s, int *i)
+int			indexlist_poplast(t_ilist *s, int *i)
 {
-	t_stack *tmp;
+	t_ilist *tmp;
 	int		val;
 
 	while (s->next)
@@ -49,18 +49,18 @@ int			stack_poplast(t_stack *s, int *i)
 	return (val);
 }
 
-int			stack_push(int val, int i, t_stack **s)
+int			indexlist_push(int val, int i, t_ilist **s)
 {
-	t_stack		*new;
+	t_ilist		*new;
 
 	new = indexlistnew(val, i);
 	new->next = *s;
 	*s = new;
 }
 
-int			stack_pushback(int val, int i, t_stack *s)
+int			indexlist_pushback(int val, int i, t_ilist *s)
 {
-	t_stack		*new;
+	t_ilist		*new;
 
 	new = indexlistnew(val, i);
 	while (s->next)

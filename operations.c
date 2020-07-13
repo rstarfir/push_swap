@@ -6,13 +6,13 @@
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 21:00:52 by rstarfir          #+#    #+#             */
-/*   Updated: 2020/07/12 16:36:54 by rstarfir         ###   ########.fr       */
+/*   Updated: 2020/07/13 15:15:24 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void		push(t_stack **a, t_stack **b)
+void		push(t_ilist **a, t_ilist **b)
 {
 	int		val;
 	int		i;
@@ -31,7 +31,7 @@ void		push(t_stack **a, t_stack **b)
 	
 }
 
-void		swap(t_stack **s)
+void		swap(t_ilist **s)
 {
 	int		a;
 	int		ai;
@@ -48,7 +48,7 @@ void		swap(t_stack **s)
 	stack_push(b, bi, s);
 }
 
-void		rotate(t_stack **s)
+void		rotate(t_ilist **s)
 {
 	int		val;
 	int		i;
@@ -60,7 +60,7 @@ void		rotate(t_stack **s)
 	stack_pushback(val, i, s);
 }
 
-void		revrot(t_stack **s)
+void		revrot(t_ilist **s)
 {
 	int		r;
 	int		i;
