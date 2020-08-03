@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rstarfir <rstarfir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 13:21:20 by rstarfir          #+#    #+#             */
-/*   Updated: 2020/07/11 20:50:12 by rstarfir         ###   ########.fr       */
+/*   Updated: 2020/08/03 13:53:51 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <stdarg.h>
 # include <sys/types.h>
 # include <fcntl.h>
 
@@ -86,6 +87,8 @@ int					ft_isprint(int c);
 int					ft_isspace(int c);
 int					*ft_range(int min, int max);
 int					ft_sqrt(int nb);
+uint8_t				ft_log2(uint64_t x);
+int					ft_vasprintf(char **str, const char *fmt, va_list ap);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
@@ -94,6 +97,8 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_countmem(int n);
 void				ft_swap(int *a, int *b);
+int					ft_dprintf(int fd, const char *fmt, ...);
+int					ft_printf(const char *fmt, ...);
 void				*ft_freememmass(char **memmass);
 int					get_next_line(const int fd, char **line);
 int					ft_atoi_16(const char *str);

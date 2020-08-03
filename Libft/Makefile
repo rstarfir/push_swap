@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+         #
+#    By: rstarfir <rstarfir@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/03 22:22:01 by rstarfir          #+#    #+#              #
-#    Updated: 2020/07/11 20:50:39 by rstarfir         ###   ########.fr        #
+#    Updated: 2020/08/01 18:57:10 by rstarfir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,8 @@ LIST_FOLDER = ft_lstnew.c \
 MATH_FOLDER = ft_islower.c \
 		ft_isupper.c \
 		ft_range.c \
-		ft_sqrt.c
+		ft_sqrt.c\
+		ft_log2.c
 
 MEMORY_FOLDER = ft_memset.c \
 		ft_bzero.c \
@@ -53,6 +54,48 @@ PRINT_FOLDER = ft_putchar.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c
+
+FT_PRINTF_SRCS_NAMES = as.c \
+		buf.c \
+		fa_0_0.c \
+		fa_0_1.c \
+		fa_0_2.c \
+		fa_0_3.c \
+		fpn_core_0_0.c \
+		fpn_core_0_1.c \
+		fpn_core_0_2.c \
+		fpn_core_0_3.c \
+		fpn_core_1_0.c \
+		fpn_core_1_1.c \
+		fs_0_0.c \
+		fs_0_1.c \
+		fs_1.c \
+		ft_printf.c \
+		ft_vasprintf.c \
+		hub_char.c \
+		hub_color.c \
+		hub_fpn.c \
+		hub_int.c \
+		hub_lint.c \
+		hub_n.c \
+		hub_str.c \
+		int_core.c \
+		res_string_0.c \
+		res_string_1.c \
+		types.c \
+		wc_core.c
+
+LINT_SRCS_NAMES = lint_basic.c \
+		lint_cmp.c \
+		lint_add.c \
+		lint_sub.c \
+		lint_mul.c \
+		lint_div.c \
+		lint_shift.c \
+		lint_output_fd.c \
+		lint_output_str.c \
+		lint_input.c \
+		lint_exp.c
 
 STR_FOLDER = ft_strlen.c \
 		ft_strdup.c \
@@ -89,7 +132,8 @@ UTILS_FOLDER = ft_atoi.c\
 		ft_swap.c
 
 SRCS = $(CHAR_FOLDER) $(LIST_FOLDER) $(MATH_FOLDER) $(MEMORY_FOLDER) \
-			$(PRINT_FOLDER) $(STR_FOLDER) $(UTILS_FOLDER)
+			$(PRINT_FOLDER) $(STR_FOLDER) $(UTILS_FOLDER) \
+			$(FT_PRINTF_SRCS_NAMES) $(LINT_SRCS_NAMES)
 
 INC = -I./includes
 
@@ -102,6 +146,8 @@ vpath %.c memory
 vpath %.c print
 vpath %.c str
 vpath %.c utils
+vpath %.c ft_printf
+vpath %.c lint
 
 GCCF = -Wall -Wextra -Werror
 
