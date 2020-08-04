@@ -6,7 +6,7 @@
 /*   By: rstarfir <rstarfir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/15 22:07:15 by rstarfir          #+#    #+#             */
-/*   Updated: 2020/08/03 23:36:37 by rstarfir         ###   ########.fr       */
+/*   Updated: 2020/08/04 15:51:40 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@ void	sort(t_data *s)
 {
 	while (!is_sorted(s))
 	{
-		while (s->a.top->size > 2)
+		while (s->a.top->size)
 			if (chunk_a_sorted(s))
 				s->a.top->size = 0;
+			else if (s->a.top->size == 2)//fix this shit idiot
+				(void)sa(s);
 			else
 				a_partition(s);
-		if (s->a.top->size == 2 && (!chunk_a_sorted(s)))//fix this shit idiot
-			(void)sa(s);
 		s->a.top->size = 0;
 		if (s->b.top)
 		{
