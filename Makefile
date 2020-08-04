@@ -6,7 +6,7 @@
 #    By: rstarfir <rstarfir@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/19 14:40:55 by rstarfir          #+#    #+#              #
-#    Updated: 2020/08/03 23:52:51 by rstarfir         ###   ########.fr        #
+#    Updated: 2020/08/04 19:02:48 by rstarfir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,12 +68,11 @@ clean:
 	
 	@rm -rf $(OBJDIR)
 	@make -C $(LIBFT) clean
-	@make -C $(MLX) clean
 
 fclean: clean
+	@make -C $(LIBFT) fclean
 	@rm -rf $(NAME_CH)
 	@rm -rf $(NAME_PS)
-	@make -C $(LIBFT) fclean
 
 re: fclean all
 

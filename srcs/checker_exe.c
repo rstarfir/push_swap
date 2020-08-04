@@ -6,7 +6,7 @@
 /*   By: rstarfir <rstarfir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/03 12:41:01 by rstarfir          #+#    #+#             */
-/*   Updated: 2020/08/03 16:29:15 by rstarfir         ###   ########.fr       */
+/*   Updated: 2020/08/04 19:05:41 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,4 @@ void	exec_check(t_data *s)
 		s->op[i](s);
 		free(line);
 	}
-	if (line)
-		free(line);
 }
