@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rstarfir <rstarfir@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 20:11:35 by rstarfir          #+#    #+#             */
-/*   Updated: 2020/08/03 16:37:22 by rstarfir         ###   ########.fr       */
+/*   Updated: 2020/08/05 12:59:27 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <limits.h>
-#include <stdio.h>
-#include <errno.h>
-#include <stdbool.h>
-#include "push_struct.h"
-#include "../Libft/includes/libft.h"
+# include <stdlib.h>
+# include <unistd.h>
+# include <limits.h>
+# include <stdio.h>
+# include <errno.h>
+# include <stdbool.h>
+# include "push_struct.h"
+# include "../Libft/includes/libft.h"
 
 # define SA		0
 # define RA		1

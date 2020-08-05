@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rstarfir <rstarfir@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/03 11:45:49 by rstarfir          #+#    #+#             */
-/*   Updated: 2020/08/03 13:45:38 by rstarfir         ###   ########.fr       */
+/*   Updated: 2020/08/05 13:03:15 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	mode(t_data *s, char **av)
 	return (counter);
 }
 
-int		main(int ac, char **av)
+int			main(int ac, char **av)
 {
 	t_data	s;
 
@@ -43,5 +43,5 @@ int		main(int ac, char **av)
 	else
 		ft_putendl("KO");
 	clean(&s);
-	return(0);
+	return (0);
 }

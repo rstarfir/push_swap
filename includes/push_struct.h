@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_struct.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rstarfir <rstarfir@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/30 20:45:35 by rstarfir          #+#    #+#             */
-/*   Updated: 2020/08/03 16:28:30 by rstarfir         ###   ########.fr       */
+/*   Updated: 2020/08/05 12:59:48 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ typedef struct			s_chunk
 	struct s_chunk		*next;
 }						t_chunk;
 
-typedef struct		s_stack
+typedef struct			s_stack
 {
 	int					size;
 	t_lst				*first;
 	t_lst				*last;
-	t_chunk				*top;//список chunk'ov
+	t_chunk				*top;
 }						t_stack;
 
 typedef enum			e_mode
@@ -47,10 +47,10 @@ typedef enum			e_mode
 
 typedef struct			s_data
 {
-	t_mode				mode;//режим запуска
+	t_mode				mode;
 	t_stack				a;
 	t_stack				b;
-	t_lst				**array;//массив листов
+	t_lst				**array;
 	int					(*op[11])(struct s_data*);
 }						t_data;
 

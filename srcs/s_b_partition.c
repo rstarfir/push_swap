@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   s_b_partition.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rstarfir <rstarfir@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/01 12:36:56 by rstarfir          #+#    #+#             */
-/*   Updated: 2020/08/01 19:38:54 by rstarfir         ###   ########.fr       */
+/*   Created: 2020/06/15 22:09:15 by rstarfir          #+#    #+#             */
+/*   Updated: 2020/08/05 13:12:42 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

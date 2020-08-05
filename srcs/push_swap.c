@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rstarfir <rstarfir@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 20:26:33 by rstarfir          #+#    #+#             */
-/*   Updated: 2020/08/01 19:18:54 by rstarfir         ###   ########.fr       */
+/*   Updated: 2020/08/05 13:06:32 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,3 @@ int		main(int ac, char **av)
 	clean(&s);
 	return (0);
 }
- 

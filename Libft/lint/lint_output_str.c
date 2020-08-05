@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lint_output_str.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rstarfir <rstarfir@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/04 20:21:08 by domurdoc          #+#    #+#             */
-/*   Updated: 2020/08/01 19:14:21 by rstarfir         ###   ########.fr       */
+/*   Created: 2020/08/05 12:54:11 by rstarfir          #+#    #+#             */
+/*   Updated: 2020/08/05 12:54:13 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

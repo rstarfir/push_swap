@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_vasprintf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rstarfir <rstarfir@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/04 02:45:31 by domurdoc          #+#    #+#             */
-/*   Updated: 2020/08/01 18:52:50 by rstarfir         ###   ########.fr       */
+/*   Created: 2020/08/05 12:49:19 by rstarfir          #+#    #+#             */
+/*   Updated: 2020/08/05 12:49:27 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
